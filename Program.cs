@@ -5,7 +5,7 @@
 // 12821 -> да
 // 23432 -> да
 
-void Pallidrom(int number)
+int Pallidrom(int number)
 {
     if (number < 10000 && number > 1000000)
     {
@@ -13,16 +13,23 @@ void Pallidrom(int number)
     }
     else
     {
-        int [] array = new int[5];
-        for (int i =0; i < 5; i++)
+        int [] array = number.ToString().ToCharArray().Select(Convert.ToInt32).ToArray(); // число в массив
+        Array.Reverse(array);
+
+        int result = 0;
+        for (int i = 0; i < array.Length; i++)
         {
-            array[i] = 
+        result += array[i] * Convert.ToInt32(Math.Pow(10, array.Length-i-1));
+        Console.WriteLine(result);
         }
+        
     }
+return number;
 }
 Console.WriteLine("Input number ");
 int number = Convert.ToInt32(Console.Read());
 Pallidrom(number);
+Console.WriteLine();
 
 
 
