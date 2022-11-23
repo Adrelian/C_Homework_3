@@ -5,34 +5,25 @@
 // 12821 -> да
 // 23432 -> да
 
-// void Pallidrom(int number)
-// {
-//     if (number < 10000 && number > 1000000)
-//     {
-//         Console.WriteLine("Wrong number");
-//     }
-//     else
-//     {
-//         int [] array = new int[5];
-//         for (int i =0; i < 5; i++)
-//         {
-//             array[i] = 
-//         }
-//     }
-// }
-// Console.WriteLine("Input number ");
-// int number = Convert.ToInt32(Console.Read());
-// Pallidrom(number);
-
-var digits = new List<int>();
-var integer = 123456;
-while (integer > 0)
+void Pallidrom(int number)
 {
-  digits.Add(integer % 10);
-  integer /= 10;
+    if (number < 10000 && number > 1000000)
+    {
+        Console.WriteLine("Wrong number");
+    }
+    else
+    {
+        int [] array = new int[5];
+        for (int i =0; i < 5; i++)
+        {
+            array[i] = 
+        }
+    }
 }
+Console.WriteLine("Input number ");
+int number = Convert.ToInt32(Console.Read());
+Pallidrom(number);
 
-Console.WriteLine(digits());
 
 
 
