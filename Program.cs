@@ -5,32 +5,14 @@
 // 12821 -> да
 // 23432 -> да
 
-int Pallidrom(int number)
-{
-    if (number < 10000 && number > 1000000)
-    {
-        Console.WriteLine("Wrong number");
-    }
-    else
-    {
-        int [] array = number.ToString().ToCharArray().Select(Convert.ToInt32).ToArray(); // число в массив
-        Array.Reverse(array);
-
-        int result = 0;
-        for (int i = 0; i < array.Length; i++)
-        {
-        result += array[i] * Convert.ToInt32(Math.Pow(10, array.Length-i-1));
-        Console.WriteLine(result);
-        }
-        
-    }
-return number;
-}
-Console.WriteLine("Input number ");
-int number = Convert.ToInt32(Console.Read());
-Pallidrom(number);
-Console.WriteLine();
-
+// Конд на питоне. на вход даём число,
+// def is_pal(n):
+//     nn=n
+//     rn=0
+//     while(n>0):
+//         rn=rn*10+n%10
+//         n=n//10
+//     return nn==rn
 
 
 
